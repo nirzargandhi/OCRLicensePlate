@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="HomeVC" customModule="OCRLicensePlate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55S-0T-zFI">
+                                <rect key="frame" x="20" y="40" width="335" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1W9-Fa-DDK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAw-WQ-yy4">
+                                <rect key="frame" x="20" y="210" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q95-kX-55E">
+                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1id-dW-gIk"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Scan Plate"/>
+                                <connections>
+                                    <action selector="scanPlateBtnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3IS-wd-1vi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q95-kX-55E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Lyz-WS-WMb"/>
+                            <constraint firstAttribute="trailing" secondItem="Q95-kX-55E" secondAttribute="trailing" constant="20" id="O0Z-3s-zcA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="55S-0T-zFI" secondAttribute="trailing" constant="20" id="R8K-nS-Ddy"/>
+                            <constraint firstAttribute="trailing" secondItem="fAw-WQ-yy4" secondAttribute="trailing" constant="20" id="ZAt-1K-0sY"/>
+                            <constraint firstItem="fAw-WQ-yy4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="a9d-dM-7xT"/>
+                            <constraint firstItem="fAw-WQ-yy4" firstAttribute="top" secondItem="55S-0T-zFI" secondAttribute="bottom" constant="20" id="bJP-GI-rWd"/>
+                            <constraint firstItem="55S-0T-zFI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dTd-Kp-SMf"/>
+                            <constraint firstItem="55S-0T-zFI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="n9W-Mf-ceM"/>
+                            <constraint firstAttribute="bottom" secondItem="Q95-kX-55E" secondAttribute="bottom" constant="20" id="yXT-Wj-iiP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraContainer" destination="55S-0T-zFI" id="Lj9-1J-ooR"/>
+                        <outlet property="scanPlateBtn" destination="Q95-kX-55E" id="jmK-lW-WCu"/>
+                        <outlet property="scanPlateLbl" destination="fAw-WQ-yy4" id="GEj-xh-h3d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="-27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
