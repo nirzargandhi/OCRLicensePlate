@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import Vision
 
-class HomeVC: UIViewController {
+class HomeVC: BaseVC {
     
     // MARK: - IBOutlets
     @IBOutlet weak var cameraContainer: UIView!

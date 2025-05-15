@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set Root Controller
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .white
-        let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        let homeVC = getStoryBoard(identifier: "HomeVC", storyBoardName: Constants.Storyboard.Main) as! HomeVC
         self.setRootViewController(rootVC: homeVC)
         
         self.window?.makeKeyAndVisible()
